@@ -1,0 +1,25 @@
+Process for game programming (as I understand)
+
+Main Method:
+int main( int argc, char* args[] );
+ 1. Perform all necessary initialization via init() method.
+ 2. Load all media necessary via loadMedia() method.
+ 3. Enter main loop. Includes all input updates and window updates.
+ 4. After loop is complete, safely close the program and return 0.
+
+Initialization Method:
+int init();
+Within the initialization method "init()", you must perform all library initializations such as "SDL_Init()" and "IMG_Init()".
+ 1. Initialize SDL.
+ 2. Create main window.
+ 3. Initialize image loading.
+ 4. Get window surface.
+
+Media Loading Method:
+int loadMedia();
+Within the loading method "loadMedia()", all image loading for the program is completed. I suspect that this will change as we move onto larger games with more strenuous rendering requirements.
+ 1. Set loading success flag.
+ 2. Load all surfaces with custom "loadSurface( std::string path )" method.
+ 3. Return success flag.
+
+
